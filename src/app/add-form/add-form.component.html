@@ -1,0 +1,36 @@
+
+<div class="card" style="width:700px">
+    <div class="card-body">
+    <h2>Add Cbus</h2>
+    <form >
+        <div class="form-group">
+            <label for="id">CRESTRA</label>
+            <input type="text" class="form-control" id="crestra" name="crestra" [(ngModel)]="cbus.crestra">
+        </div>
+        <div class="form-group">
+            <label for="id">CNIVBUS</label>
+            <input type="text" class="form-control" id="cnivbus" name="cnivbus" [(ngModel)]="cbus.cnivbus">
+        </div>
+        <div class="form-group">
+            <label for="id">CTYPEOFF</label>
+            <input type="text" class="form-control" id="ctypeoff" name="ctypeoff" [(ngModel)]="cbus.ctypeoff">
+        </div>
+        <div class="form-group">
+            <label for="id">UOT</label>
+            <input type="text" class="form-control" id="uot" name="uot" [(ngModel)]="cbus.uot">
+        </div>
+        <div class="form-group">
+            <label for="cddb">COFFCDDB</label>
+            <input type="text" class="form-control" id="cddb" name="cddb" [(ngModel)]="cbus.coffcddb">   
+        </div>
+        <div class="form-group">
+            <label for="btw">COFFBTWTVA</label>
+            <input type="text" class="form-control" id="btw" name="btw" [(ngModel)]="cbus.coffbtwtva">
+        </div>
+        <button (click)="onSubmit()" class="btn btn-success">Add CBUS</button>
+    </form>
+
+    </div>
+
+</div>
+ 

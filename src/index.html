@@ -2,12 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>FrontEndPo</title>
+  <title> FOD Financiën / SPF Finances / FOD Finanzen / FPS Finance</title>
   <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+
+
+    <!-- Bootstrap -->
+    <link href="/assets/css/fin_style.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+  
+
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<!-- PreHeader .be  -->
+<div id="be-header" class="with-line">
+    <div class="be-header-inner">
+      <div class="container">
+          <div class="region region-be-header">
+            <section id="block-locale-language" class="block block-locale col-xs-6 col-sm-4 col-md-6 clearfix">
+              <ul class="language-switcher-locale-url">
+                <li class="nl first">
+                  <a href="index_nl.html" class="language-link" title="Nederlands">NL</a>
+                </li>
+                <li class="fr last active">
+                  <a href="index.html" class="language-link active" title="Français">FR</a>
+                </li>
+                <li class="de last">
+                  <a href="/de" class="language-link" title="Deutsch">DE</a>
+                </li>
+                <li class="en last">
+                  <a href="/en" class="language-link active" title="English">EN</a>
+                </li>
+              </ul>
+            </section>
+            <section id="block-kanselarij-be-header" class="block block-kanselarij col-xs-6 col-sm-8 col-md-6 text-right clearfix nopadding">
+              <!--NL
+              <div>
+                <span class="hidden-xs">Andere informatie en diensten van de overheid:</span>
+                  <a href="http://www.belgium.be/nl" target="_blank">www.belgium.be</a> 
+                    <img class="img-responsive" src="imgs/be-logo.gif" width="32px" height="23px" alt="Logo of the Belgian government">
+              </div>-->
+              <!--FR-->
+              <div>
+                <span class="hidden-xs">Autres informations et services officiels : </span>
+                  <a href="http://www.belgium.be/fr" target="_blank">www.belgium.be</a> 
+                    <img class="img-responsive" src="/assets/imgs/be-logo.gif" width="32px" height="23px" alt="Logo of the Belgian government">
+              </div>
+              <!--DE
+              <div>
+                <span class="hidden-xs">Andere offizielle Informationen und Dienste: </span>
+                  <a href="http://www.belgium.be/de" target="_blank">www.belgium.be</a> 
+                    <img class="img-responsive" src="imgs/be-logo.gif" width="32px" height="23px" alt="Logo of the Belgian government">
+              </div>-->
+              <!--EN
+              <div>
+                <span class="hidden-xs">Other official information and services: </span>
+                  <a href="http://www.belgium.be/en" target="_blank">www.belgium.be</a>  
+                    <img class="img-responsive" src="imgs/be-logo.gif" width="32px" height="23px" alt="Logo of the Belgian government">
+              </div>-->
+            </section>
+          </div>
+      </div>
+    </div>
+  </div>
+<!-- End PreHeader .be  -->
+<!-- Header -->
+  <header>
+  	<div class="row nomargin bg_dots_deg">
+  		<div class="container">
+        <div class="left header">
+          <div class="fin-logo">
+          	<!--NL <img src="imgs/_fin_logo_nl.gif" alt="Federale Overheidsdienst Financiën">-->
+          	<!--FR--><img src="/assets/imgs/_fin_logo_fr.gif" alt="Service Public Fédéral Finances">
+          	<!--DE <img src="imgs/_fin_logo_de.gif" alt="Föderale Öffentlicher Dienst Finanzen">-->
+          	<!--EN <img src="imgs/_fin_logo_en.gif" alt="Federal Public Service Finance">-->
+          </div>
+        </div>
+        <div class="right header">
+          <div class="login">
+            <button type="button" class="btn-md btn-fin01">
+            <span>LOGIN</span> </button>
+          </div>
+          <div class="njr">
+            <img src="/assets/imgs/_fin_njr.gif" class="njr" alt="Noir/Jaune/Rouge">
+          </div>
+        </div>
+  		</div>
+  	</div>
+  </header>
+  <!-- End Header-->
+
+  <!-- Static navbar -->
+  <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid nopadding">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div style="display: inline;">
+            <ul class="breadcrumb"  style="list-style: none;">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Lorem</a></li>
+              <li><a href="#">Ipsum</a></li>
+              <li><a href="#">Sitamec</a></li>
+              <li><a href="#">Trucmuch</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right fin-search">
+              <div class="form-group">
+                <label for="Search" class="label-search">Search</label>
+                <input class="form-control" type="text" class="form-control" id="Search" name="Sender[Search]"  placeholder="Search">
+
+              </div>
+              <button id="Search" type="submit" class="btn btn-search" title="Search">Search</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    </div>
+  <!-- End Navigation -->
+
+  <!-- Full Width Image  -->
+  
+   <div class="image-bg-fluid-height">
+    
+   </div>
+  <!-- End Full Width Image  -->
+
+  <!-- content -->
+  <div class="container content">
+        <div class="row">
+        <div class="fin-breadcrumb mgt10">
+		    <ul class="breadcrumb">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">Products</a></li>
+		        <li class="active">Accessories</li>
+		    </ul>
+		</div>
   <app-root></app-root>
 </body>
 </html>
+
+
+
+
