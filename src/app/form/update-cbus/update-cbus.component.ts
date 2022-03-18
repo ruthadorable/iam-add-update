@@ -30,7 +30,7 @@ export class UpdateCbusComponent implements OnInit {
 
   
   onSubmit():void{
-    this.cbusService.updateCbus(this.id,this.cbus).subscribe(data=>console.log(data),error=>console.error());
+    this.cbusService.updateCbus(this.cbus).subscribe(data=>console.log(data),error=>console.error());
     this.cbus=new Cbus();
     this.router.navigate(['/form']);
   }

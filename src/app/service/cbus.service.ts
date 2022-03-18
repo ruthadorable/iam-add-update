@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cbus } from '../models/cbus';
 import { MOCK_CBUS } from '../cbus.mock';
@@ -8,11 +9,23 @@ import { MOCK_CBUS } from '../cbus.mock';
 })
 export class CbusService {
 
-  cbusCopy!:Cbus;
+  private cbusCopy!:Cbus;
+  private baseUrl!:string;
+  private addCbusUrl!: string;
+  private getCbusUrl!:string;
+  private updateCbusUrl!:string;
+  private deleteCbusUrl!:string;
 
-  private baseUrl="http://localhost/8080/api/cbus"
+
+  
   constructor(private http: HttpClient) 
   {    
+    this.baseUrl="http://localhost:8080/api/cbus";
+    this.addCbusUrl="http://localhost:8080/api/cbus/add";
+    this.getCbusUrl="http://localhost:8080/api/cbus/getAll";
+    this.updateCbusUrl="http://localhost:8080/api/cbus/update/";
+    this.deleteCbusUrl="http://localhost:8080/api/cbus/delete/";
+
   }
   public setData(cbus :Cbus)
   {
@@ -24,21 +37,24 @@ export class CbusService {
     return this.cbusCopy;
   }
   public getCbus(): Observable<Cbus[]>{
-    return this.http.get<Cbus[]>(`${this.baseUrl}`);
+    return this.http.get<Cbus[]>(`${this.getCbusUrl}`);
   }
 
   public postCbus(cbus: Cbus): Observable<Cbus> {
-    return this.http.post<Cbus>(`${this.baseUrl}add`, cbus);
+    return this.http.post<Cbus>(`${this.addCbusUrl}`, cbus);
   }
 
-  public updateCbus(id:number,cbus: Cbus): Observable<Cbus>{
-    return this.http.put<Cbus>(`${this.baseUrl+id}`,cbus);
+  public updateCbus(cbus: Cbus): Observable<Cbus>{
+    return this.http.put<Cbus>(`${this.updateCbusUrl}${cbus.crestra}`,cbus);
   }
   public getCbusById(id:number): Observable<Cbus>{
-    return this.http.get<Cbus>(`${this.baseUrl}id`);
+    return this.http.get<Cbus>(`${this.baseUrl}/id`);
   }
   public getCbusByFind(id:number):any{
     return MOCK_CBUS.find( x=> x.crestra === id);
+  }
+  public deleteCbus(id:number,cbus:Cbus): Observable<Cbus>{
+    return this.http.delete<Cbus>(`${this.deleteCbusUrl}`+id);
   }
   
 }

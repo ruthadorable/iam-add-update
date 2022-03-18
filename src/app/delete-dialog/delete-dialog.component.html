@@ -1,5 +1,9 @@
-<h1 mat-dialog-title>Delete codes</h1>
+<h1 mat-dialog-title>Confirm Delete</h1>
 <div mat-dialog-content>
-   <h1>Are you sure to delete these code?</h1>
+  <p>Are you sure to delete this record?</p>
+  
 </div>
-<button mat-raised-button color="basic" >Confirm</button><button mat-raised-button color="warn">Cancel</button>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

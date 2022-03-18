@@ -22,6 +22,7 @@ import { UpdateCbusComponent } from './form/update-cbus/update-cbus.component';
 import { Pipe ,PipeTransform} from '@angular/core';
 import { AddFormComponent } from './add-form/add-form.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     InlineFormComponent,
     TablerowComponent,
     UpdateCbusComponent,
-    AddFormComponent
+    AddFormComponent,
+    ConfirmDeleteComponent
   
   ],
   imports: [

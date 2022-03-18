@@ -1,5 +1,5 @@
 
-<button id="btn-add" [routerLink]="['/addform']" class="btn btn-success">Add Record</button>
+<button id="btn-add" [routerLink]="['/addform']" class="btn btn-primary">Add Record</button>
 
 
 <input class="form-control" type="text" placeholder="Search by CRESTRA" aria-label="Search" [(ngModel)]="filteredSearch"/>
@@ -11,7 +11,7 @@
         <th scope="col">CRESTRA</th>
         <th scope="col">CNIVBUS</th>
         <th scope="col">CGESBUS</th>
-        <th scope="col">CTYPEOFF</th>
+        <th scope="col">CTYPOFF</th>
         <th scope="col">UOT</th>
         <th scope="col">COFFCDDB</th>
         <th scope="col">COFFBTWTVA</th>
@@ -24,7 +24,7 @@
           <td>{{c.crestra}}</td>
           <td>{{c.cnivbus}}</td>
           <td>{{c.cgesbus}}</td>
-          <td>{{c.ctypeoff}}</td>
+          <td>{{c.ctypoff}}</td>
           <td>{{c.uot}}</td>
           <td>
             <div *ngIf="!c.isEdit">{{c.coffcddb}}</div>
@@ -40,12 +40,12 @@
                     <button class="btn btn-primary" (click)="getCbusById(c)" aria-hidden="true">Edit</button>
                 </div>
                 <div class="col-md-6 text-right">
-                  <button class="btn btn-danger" (click)="deleteCbus(c.crestra)" aria-hidden="true">Delete</button>
+                  <button class="btn btn-primary" (click)="openDialog(c)" aria-hidden="true">Delete</button>
               </div>
             </div>
             <div class="row" *ngIf="c.isEdit">
                 <div class="col-md-6 text-right">
-                    <button class="btn btn-success" (click)="saveCode(c)" aria-hidden="true">Save</button>
+                    <button class="btn btn-primary" (click)="saveCode(c)" aria-hidden="true">Save</button>
                 </div>
               </div>
           </td>
